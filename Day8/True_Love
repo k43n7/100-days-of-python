@@ -1,0 +1,118 @@
+from socket import send_fds
+
+"""
+def greet():
+    print('welcome Mark')
+    print('hello Mark')
+    print('hi Mark')
+
+
+
+
+# Function that allows for inputs
+
+def greet_with_name(name):
+    print("hello " + name)
+    print("how you doing today " + name)
+    print('Are you working today ' + name)
+
+
+def life_in_weeks(age):
+    weeks = 52
+    years = 90
+    remaining_weeks = (years - age) * weeks
+    print(f"you have {remaining_weeks} weeks")
+
+life_in_weeks(56)
+"""
+
+"""
+# Functions with more than 1 input
+
+def greet_with(name, location):
+    print("hello " + name)
+    print("say I said hi and how you doing today to all of " + location)
+
+greet_with("James", "texas") 
+"""
+
+def check_true(name1, name2):
+    num_t = 0
+    num_r = 0
+    num_u = 0
+    num_e = 0
+    total = 0
+
+    check_for_letters = ["T", "R", "U", "E"]
+
+
+    for letter in name1 + name2:
+        letter = letter.upper()
+        if letter in check_for_letters:
+            total += 1
+            if letter == "T":
+                num_t += 1
+            elif letter == "R":
+                num_r += 1
+            elif letter == "U":
+                num_u += 1
+            elif letter == "E":
+                num_e += 1
+
+    print(f"T occurs {num_t}")
+    print(f"R occurs {num_r}")
+    print(f"U occurs {num_u}")
+    print(f"E occurs {num_e}")
+    print(f"total = {total}")
+
+    return total
+
+def check_love(name1, name2):
+    num_l = 0
+    num_o = 0
+    num_v = 0
+    num_e = 0
+    total = 0
+
+    check_for_letters = ["L", "O", "V", "E"]
+
+
+    for letter in name1 + name2:
+        letter = letter.upper()
+        if letter in check_for_letters:
+            total += 1
+            if letter == "L":
+                num_l += 1
+            elif letter == "O":
+                num_o += 1
+            elif letter == "V":
+                num_v += 1
+            elif letter == "E":
+                num_e += 1
+
+    print(f"T occurs {num_l}")
+    print(f"R occurs {num_o}")
+    print(f"U occurs {num_v}")
+    print(f"E occurs {num_e}")
+    print(f"total = {total}")
+
+    return total
+
+
+
+def calculate_love_score(name1, name2):
+    true_total = check_true(name1, name2)
+    love_total = check_love(name1, name2)
+
+    love_score = str(true_total) + str(love_total)
+    print(f"Love Score = {love_score}")
+
+
+
+calculate_love_score("Angela Yu", "Jack Bauer")
+
+
+
+
+
+
